@@ -44,12 +44,5 @@ To get started with this project, follow these steps:
 ## Usage
 Customize and build upon this project to create your own Java web application. You can add new servlets, JSP pages, and JPA entities to meet your specific requirements.
 
-## License
-This project is available under the [MIT License](LICENSE). Feel free to use and modify it as needed.
-
-Please refer to the documentation of each technology mentioned above for detailed instructions on using them in your project.
-
-If you have any questions or encounter issues, don't hesitate to reach out to the project maintainers.
-
 Happy coding!
 
