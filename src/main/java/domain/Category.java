@@ -6,19 +6,19 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class category {
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private String description;
 
-    public category(String name, String description) {
+    public Category(String name, String description) {
         this.name = name;
         this.description = description;
     }
 
-    public category() {
+    public Category() {
     }
 
     public String getName() {

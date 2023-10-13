@@ -2,30 +2,27 @@ package com.example.javaeehelloworld;
 
 import java.io.*;
 
+import com.example.javaeehelloworld.service.EventService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
-import jakarta.ws.rs.core.Response;
 
-//@WebServlet(name = "helloServlet", value = "/hello-servlet")
+@WebServlet(name = "helloServlet", value = "", loadOnStartup = 1)
 public class HelloServlet extends HttpServlet {
     private String message;
 
     public void init() {
+        EventService service = new EventService();
         message = "Hello World! mohamed";
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 //        String message = "hello nachit" ;
 //        request.setAttribute("saad",message);
 //       this.getServletContext().getRequestDispatcher("/WEB-INF/nachit.jsp").forward(request,response);
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        out.println("<h1>hhh</h1>");
-    }
-
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
-        
+        out.println("<h1>"+message+"</h1>");
     }
 
 
